@@ -23,6 +23,9 @@ Using the eeglab interface:
 * at the matlab command prompt, add eeglab root directory to the path and launch eeglab
 * load an eeglab dataset
 * navigate to Tools > Mark Events > Mark Events >
+* simply left-click and drag mouse cursor to mark an event. 
+* single left-click on a marked event to undo.
+* when finished marking events, click "label events" button, enter desired label and save.
 
 ## Author
 
