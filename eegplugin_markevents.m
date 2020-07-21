@@ -26,7 +26,7 @@ function vers = eegplugin_markevents(fig, trystrs, catchstrs)
 % Brain & Mind Institute, Western University, Canada
 % July 7, 2014
 
-vers = '2.1.1';
+vers = '2.1.2';
 if nargin < 3
     error('eegplugin_markevents requires 3 arguments');
 end

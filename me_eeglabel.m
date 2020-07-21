@@ -52,6 +52,9 @@ end
 
 % handle regions from eegplot and insert labels
 % -------------------------------------
+if isempty([EEG.event(:).urevent]) % first, check that the EEG.event.urevent is not empty (required for pop_editeventvals)
+    EEG = eeg_checkset(EEG,'makeur');
+end
 if ~isempty(result)
     if size(regions,2) > 2,
         regions = regions(:,3:4);
