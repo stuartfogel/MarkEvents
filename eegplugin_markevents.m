@@ -25,8 +25,11 @@ function vers = eegplugin_markevents(fig, trystrs, catchstrs)
 % Modifed by Stuart Fogel to work with newer eeglab versions
 % Brain & Mind Institute, Western University, Canada
 % July 7, 2014
+%
+% July 13, 2021 - added additional check of urevents - SF
 
-vers = '2.1.2';
+
+vers = '2.1.3';
 if nargin < 3
     error('eegplugin_markevents requires 3 arguments');
 end

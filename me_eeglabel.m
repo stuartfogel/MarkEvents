@@ -25,8 +25,9 @@ function [EEG,com] = me_eeglabel(EEG,regions)
 % Copyright (C) <2007>  German Gomez-Herrero, http://germangh.com%
 %
 % Modifed by Stuart Fogel to work with newer eeglab versions
-% Brain & Mind Institute, Western University, Canada
-% July 7, 2014
+% Brain & Mind Institute, Western University, Canada, July 7, 2014
+%
+% July 13, 2021 - added additional check of urevents - SF
 
 if nargin < 2,
     % help me_eeglabel;
@@ -54,6 +55,8 @@ end
 % -------------------------------------
 if isempty([EEG.event(:).urevent]) % first, check that the EEG.event.urevent is not empty (required for pop_editeventvals)
     EEG = eeg_checkset(EEG,'makeur');
+else % if not empty, check that it is ok
+    EEG = eeg_checkset(EEG, 'checkur');
 end
 if ~isempty(result)
     if size(regions,2) > 2,
